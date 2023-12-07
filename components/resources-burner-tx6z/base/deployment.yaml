@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: resources-burner-tx6z
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: resources-burner-tx6z
+    app.kubernetes.io/part-of: load-app-fa796bda-6571-4d3d-99ca-68c9daeb87d1
+  name: resources-burner-tx6z
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: resources-burner-tx6z
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: resources-burner-tx6z
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
